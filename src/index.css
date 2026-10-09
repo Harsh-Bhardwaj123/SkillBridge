@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#f4f8f7] text-[#142a2b] font-sans min-h-screen overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-[#142a2b] font-bold tracking-tight;
+  }
+}
+
+/* Framer Clean Card Styles */
+.framer-card {
+  background: #ffffff;
+  border: 1px solid #e2ece9;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(20, 42, 43, 0.04), 0 6px 16px rgba(20, 42, 43, 0.02);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.framer-card:hover {
+  border-color: rgba(0, 127, 112, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 127, 112, 0.07);
+}
+
+.framer-pill {
+  background: #e6f3f0;
+  color: #007f70;
+  border: 1px solid #cde4df;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  padding: 4px 12px;
+}
+
+.framer-eyebrow {
+  color: #647878;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* Custom Soft Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f8f7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cde4df;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9abfb6;
+}
+
+/* Certificate Styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #certificate-print-area, #certificate-print-area * {
+    visibility: visible;
+  }
+  #certificate-print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
